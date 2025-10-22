@@ -1,0 +1,50 @@
+
+  /* Taille par défaut (mobile) */
+.large-card {
+    width: 100%;
+    max-width: 20rem; /* plus large qu’avant */
+    margin: 0 auto;
+}
+
+  /* À partir des écrans moyens (tablettes et +) */
+@media (min-width: 768px) {
+    .row-cols-md-3 > * {
+    flex: 0 0 auto;
+      width: 33.3333%; /* 3 cartes par ligne */
+    }
+    .large-card {
+      max-width: 22rem; /* plus large sur les écrans moyens */
+    }
+}
+
+  /* Grand écran */
+@media (min-width: 1200px) {
+    .large-card {
+      max-width: 24rem; /* encore plus large sur desktop */
+    }
+}
+
+  /* Style visuel */
+.card-body {
+    padding: 1rem;
+}
+.card-title {
+    font-size: 1.1rem;
+}
+.card-text {
+    font-size: 0.95rem;
+}
+
+  /* Effet au survol */
+.large-card:hover {
+    transform: scale(1.04);
+    transition: 0.3s ease;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.card-img-top {
+  width: 100%;           /* remplit la largeur de la carte */
+  height: 180px;         /* même hauteur pour toutes les images */
+  object-fit: cover;     /* coupe l'image si nécessaire pour garder le ratio */
+}
+
